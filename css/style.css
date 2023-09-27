@@ -10,7 +10,7 @@
   /* Colors */
   --color-white: #ffffff;
   --color-black: #050a13;
-  --color-blue: #03e8f9;
+  --color-blue: #47adf5;
   --color-orange: #fd6413;
   --color-gray: #1b1e26;
 }
@@ -21,6 +21,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
 }
 
 h1,
@@ -49,4 +50,51 @@ button {
 
 button:focus {
   outline: 1px solid var(--color-accent);
+}
+
+/* Header */
+.header {
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* .header__logo img 이렇게 하면 클래스를 지정안하고 바로 해당 헤더로고의 이미지를 지정할 수 있지만*/
+/* 코드의 모든 이미지를 순회하고 그 중에 헤더로고에 있는 것을 가려주는 것이기 때문에 좋지 않다  */
+.header__logo__img {
+  width: 36px;
+  height: 36px;
+}
+
+.header___logo__title {
+  font-size: 1.6rem;
+}
+
+.header__menu {
+  display: flex;
+  gap: 4px;
+}
+
+.header__menu__item {
+  padding: 8px 16px;
+}
+
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.header__menu__item.active {
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
 }
