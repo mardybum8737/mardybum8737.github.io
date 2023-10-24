@@ -24,16 +24,20 @@
       href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;700&family=Montserrat:wght@100;300;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/b5e773d82b.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Javascript -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
     <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
     <!-- 스크립트 다 다운받아지는 것을 기다리는게 아니라 일단 문서 읽기 계속 진행시키도록 defer 사용 -->
   </head>
   <body>
@@ -63,16 +67,16 @@
     <main>
       <!-- Home -->
       <section id="home">
-        <div class="home__container">
+        <div class="max-container home__container">
           <img
             class="home__avatar"
             src="images/profile.png"
             alt="applebang's profile"
           />
-          <h2 class="home__title">
+          <h2 class="home__title" aria-label="Hello I'm Product Designer, Suho">
             Hello <br />
             I&#39;m
-            <strong class="home__title--strong">Product Designer</strong>, Suho
+            <strong class="home__title--strong">Designer</strong>, Suho
           </h2>
           <p class="home__description">
             who loves coding, graphic design, writing.
