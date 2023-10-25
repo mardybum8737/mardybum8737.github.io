@@ -15,6 +15,7 @@
   );
 
   --home-bg-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%238f129d'/%3E%3Cstop offset='1' stop-color='%238f129d' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2310458a'/%3E%3Cstop offset='1' stop-color='%2310458a' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23db32ff'/%3E%3Cstop offset='1' stop-color='%23db32ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23050A13'/%3E%3Cstop offset='1' stop-color='%23050A13' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF6347'/%3E%3Cstop offset='1' stop-color='%23FF6347' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%231E90FF'/%3E%3Cstop offset='1' stop-color='%231E90FF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  --home-avatar-svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1800" fill="%231E90FF"><path d="M70.93 687.44C94 439 234.2 293.95 381.02 188.24 527.84 82.53 887.27-.87 1159.77 82.53c272.5 83.4 553.55 115.11 673.78 302.45 120.23 187.35 114.36 417.56 87.35 671.27-27.02 253.71-150.35 364.12-335.93 543.83-185.58 179.71-590.81 176.19-973.73 106.89C228.33 1637.67 257 1468 149.63 1259.45c-91.86-178.42-96.18-383.72-78.7-572.02Z"></path></svg>');
 
   /* Colors */
   --color-white: #ffffff;
@@ -176,6 +177,7 @@ button:focus {
   padding: 5rem 1rem;
   padding-top: 7rem;
   text-align: center;
+  overflow: hidden;
   opacity: 1;
   transition: opacity 0.5s;
 }
@@ -195,17 +197,28 @@ button:focus {
   -webkit-mask: var(--divider-multiple-wave);
 }
 
+.home__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+}
+
 .home__avatar {
-  width: 250px;
-  height: 250px;
+  background: var(--home-avatar-svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  /* background-position: 0% 10%; */
+  position: relative;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
-  border-radius: 100%;
-  border: 2px solid var(--color-blue);
 }
 
 .home__title {
   font-size: 3rem;
   margin-bottom: 1rem;
+  width: 800px;
 }
 
 .home__title--strong {
